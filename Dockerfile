@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM lzzy12/mega-sdk-python:latest
 
 RUN apt-get -qq update && \
     apt-get install -y software-properties-common && \
