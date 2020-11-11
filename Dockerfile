@@ -18,7 +18,7 @@ RUN apt-get -qq update && \
 #   LANGUAGE=en_US.UTF-8 \
 #   LC_ALL=C.UTF-8
 
-RUN apt-get install docker-compose
+RUN apt-get install -y docker-compose
 
 #RUN snap install docker
 
