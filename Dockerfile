@@ -27,7 +27,7 @@ RUN cd /usr/src/app
 RUN git clone https://github.com/gautamajay52/TorrentLeech-Gdrive torrentleech-gdrive
 
 RUN cd torrentleech-gdrive
-RUN docker build -t torrentleech-gdrive
+RUN docker image build "torrentleech-gdrive"
 RUN docker run torrentleech-gdrive
 #RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
