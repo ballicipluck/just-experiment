@@ -18,7 +18,12 @@ RUN apt-get -qq update && \
 #   LANGUAGE=en_US.UTF-8 \
 #   LC_ALL=C.UTF-8
 
-RUN snap install docker
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg
+
+RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+    && apt-get update && apt-get install -y docker-ce
+
+#RUN snap install docker
 
 RUN git clone https://github.com/gautamajay52/TorrentLeech-Gdrive torrentleech-gdrive
 
