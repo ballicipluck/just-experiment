@@ -7,7 +7,14 @@ RUN apt-get -qq update && \
     curl \
     gnupg-agent \
     git \
-    snapd
+    snapd \
+    fakeroot
+    
+ ENV HOME=/root \
+    DEBIAN_FRONTEND=noninteractive \
+    LANG=en_US.UTF-8 \
+    LANGUAGE=en_US.UTF-8 \
+    LC_ALL=C.UTF-8
 
 RUN sudo snap install docker
 
