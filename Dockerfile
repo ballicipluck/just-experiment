@@ -6,7 +6,8 @@ RUN apt-get -qq update && \
     ca-certificates \
     curl \
     gnupg-agent \
-    git
+    git \
+    snapd
 
 RUN snap install docker
 
