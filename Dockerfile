@@ -20,6 +20,8 @@ RUN apt-get -qq update && \
 #   LC_ALL=C.UTF-8
 
 RUN apt-get install -y docker-compose
+#RUN systemctl start docker
+RUN dockerd
 
 #RUN snap install docker
 
