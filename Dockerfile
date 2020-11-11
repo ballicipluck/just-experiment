@@ -21,7 +21,7 @@ RUN apt-get -qq update && \
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
 RUN "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   bionic \
+   focal \
    stable" \
    && apt-get update && apt-get install -y docker-ce
 
