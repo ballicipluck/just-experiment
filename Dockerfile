@@ -18,12 +18,7 @@ RUN apt-get -qq update && \
 #   LANGUAGE=en_US.UTF-8 \
 #   LC_ALL=C.UTF-8
 
-RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-
-RUN "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   focal \
-   stable" \
-   && apt-get update && apt-get install -y docker-ce
+RUN apt-get install docker-compose
 
 #RUN snap install docker
 
