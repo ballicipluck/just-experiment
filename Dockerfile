@@ -1,5 +1,8 @@
 FROM ubuntu:20.04
 
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
+
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -qq update && \
@@ -8,9 +11,7 @@ RUN apt-get -qq update && \
     ca-certificates \
     curl \
     gnupg-agent \
-    git \
-    snapd \
-    fakeroot
+    git
     
 # ENV HOME=/root \
 #    DEBIAN_FRONTEND=noninteractive \
@@ -22,10 +23,11 @@ RUN apt-get install -y docker-compose
 
 #RUN snap install docker
 
+RUN cd /usr/src/app
 RUN git clone https://github.com/gautamajay52/TorrentLeech-Gdrive torrentleech-gdrive
 
 RUN cd torrentleech-gdrive
-RUN docker build . -t torrentleech-gdrive
+RUN docker build -t torrentleech-gdrive
 RUN docker run torrentleech-gdrive
 #RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
