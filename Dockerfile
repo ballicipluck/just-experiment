@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 RUN apt-get -qq update && \
-    apt-get install -y software-properties-common \
+    apt-get install -y -q software-properties-common \
     apt-transport-https \
     ca-certificates \
     curl \
