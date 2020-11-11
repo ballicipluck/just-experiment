@@ -18,7 +18,7 @@ RUN apt-get -qq update && \
 #   LANGUAGE=en_US.UTF-8 \
 #   LC_ALL=C.UTF-8
 
-RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
 RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
     && apt-get update && apt-get install -y docker-ce
