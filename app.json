@@ -6,7 +6,7 @@
   },
   "website": "",
   "repository": "",
-  "stack": "container"
+  "stack": "container",
   "buildpacks": [
     {
       "url": "heroku/python"
