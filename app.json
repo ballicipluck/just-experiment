@@ -7,4 +7,9 @@
   "website": "",
   "repository": "",
   "stack": "container"
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
  }
